@@ -6,6 +6,12 @@ body {
     padding: 0;
 }
 
+.logo {
+    display: block;
+    margin: 0 auto 30px;
+    width: 60px;
+}
+
 .form-container {
     width: 600px;
     margin: 50px auto;
