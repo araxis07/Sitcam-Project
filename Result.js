@@ -6,16 +6,21 @@ let answers = JSON.parse(localStorage.getItem('answers'));
 if(totalScore && answers) {
     // แปลความหมายของคะแนน
     let interpretation = '';
-    if(totalScore <= 10) {
-        interpretation = 'อาการปวดหลังของท่านอยู่ในระดับน้อย';
-    } else if(totalScore <= 20) {
-        interpretation = 'อาการปวดหลังของท่านอยู่ในระดับปานกลาง';
-    } else if(totalScore <= 30) {
-        interpretation = 'อาการปวดหลังของท่านอยู่ในระดับมาก';
-    } else if(totalScore <= 40) {
-        interpretation = 'อาการปวดหลังของท่านอยู่ในระดับรุนแรง';
-    } else {
-        interpretation = 'อาการปวดหลังของท่านอยู่ในระดับรุนแรงมาก';
+    switch(true) {
+        case totalScore <= 10:
+            interpretation = 'อาการปวดหลังของท่านอยู่ในระดับน้อย';
+            break;
+        case totalScore <= 20:
+            interpretation = 'อาการปวดหลังของท่านอยู่ในระดับปานกลาง';
+            break;
+        case totalScore <= 30:
+            interpretation = 'อาการปวดหลังของท่านอยู่ในระดับมาก';
+            break;
+        case totalScore <= 40:
+            interpretation = 'อาการปวดหลังของท่านอยู่ในระดับรุนแรง';
+            break;
+        default:
+            interpretation = 'อาการปวดหลังของท่านอยู่ในระดับรุนแรงมาก';
     }
 
     // สร้างเนื้อหาสำหรับแสดงผล
