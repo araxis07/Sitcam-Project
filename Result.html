@@ -11,9 +11,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
+    
     <div class="result-container">
+        <img src="path/to/your/logo.png" alt="Logo" class="logo">
         <h1>ผลการประเมินอาการปวดหลัง</h1>
+        
         <div id="resultContent">
             <!-- เนื้อหาผลลัพธ์จะถูกแสดงที่นี่ -->
         </div>
@@ -62,7 +64,7 @@
         } else {
             // หากไม่มีข้อมูล ให้แจ้งเตือนและนำกลับไปยังหน้าแบบฟอร์ม
             alert('ไม่พบข้อมูลผลลัพธ์');
-            window.location.href = 'back_pain_form.html';
+            window.location.href = 'back_pain_form.html'; // อันนี้คิดไม่ออกละ
         }
     </script>
 

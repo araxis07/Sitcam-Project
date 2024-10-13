@@ -1,6 +1,3 @@
-/* ส่วนสไตล์เดิมสำหรับแบบฟอร์ม */
-/* ... (คงไว้ตามที่มีอยู่) ... */
-
 /* สไตล์สำหรับหน้าผลลัพธ์ */
 .result-container {
     width: 600px;
@@ -11,6 +8,13 @@
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     font-family: 'Sarabun', sans-serif;
 }
+
+.logo {
+    display: block;
+    margin: 0 auto 30px;
+    width: 60px;
+}
+
 
 .result-container h1 {
     text-align: center;
