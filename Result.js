@@ -37,5 +37,5 @@ if(totalScore && answers) {
 } else {
     // หากไม่มีข้อมูล ให้แจ้งเตือนและนำกลับไปยังหน้าแบบฟอร์ม
     alert('ไม่พบข้อมูลผลลัพธ์');
-    window.location.href = 'Form.html'; // อันนี้คิดไม่ออกละหรือจะลบหรือก็ได้ 
+    window.location.href = 'Form.html'; 
 }
