@@ -22,9 +22,24 @@ if(!isset($_SESSION['id_account']) || !isset($_SESSION['role_account'])){//à¸–à¹
 
 $check_patience = "SELECT * FROM D_patience WHERE username = '$username_account'";
 $call_back_patience_account = mysqli_query($connect, $check_patience);
+
+$check_reported = "SELECT reported_count FROM account WHERE username_account = '$username_account'";
+$call_back_reported = mysqli_query($connect, $check_reported);
+
+if ($call_back_reported) {
+    $reported_data = mysqli_fetch_assoc($call_back_reported);
+    $reported_count = $reported_data['reported_count'];
+
+    if ($reported_count == 1) {
+        die(header('Location: reported_page.php'));
+    }
+} else {
+    echo "Error: " . mysqli_error($connect);
+}
+
 if(mysqli_num_rows($call_back_patience_account) == 1){
     die(header('Location: Detail_finish.php'));
-}
+} 
 ?>
 
 <!DOCTYPE html>
