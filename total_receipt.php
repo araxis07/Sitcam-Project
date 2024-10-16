@@ -19,6 +19,8 @@ if (!isset($_SESSION['id_account']) || !isset($_SESSION['role_account'])) { //�
     $obj = mysqli_query($connect, $str);
     $result = mysqli_fetch_array($obj);
 }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -27,17 +29,22 @@ if (!isset($_SESSION['id_account']) || !isset($_SESSION['role_account'])) { //�
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <title>Document</title>
 </head>
 
 <body>
     <center>
-        <h2>ผลวินินิจฉัย : <?php echo $result['total_score']; ?></h2><br>
-        <fieldset style="text-align: left; width: 350px; height: auto;">
+        <h1>ผลวินินิจฉัย : <?php echo $result['total_score']; ?></h1><br>
+        <fieldset style="text-align: left; width: 700px; height: auto;">
             <div>
-                ตามอาการที่คนไข้ประสบพบเจอ <?php echo $result['comments']; ?><br>
-                คนไข้สามารถ <?php echo $result['treat_score']; ?><br>
-                และขอแนะนำให้ปฏิบัติ/มาตามนัด ดังนี้ : <?php echo $result['treat_comments']; ?>
+                <h3>
+                    ตามอาการที่คนไข้ประสบพบเจอ <?php echo $result['comments']; ?><br>
+                    คนไข้สามารถ <?php echo $result['treat_score']; ?><br>
+                    และขอแนะนำให้ปฏิบัติ/มาตามนัด ดังนี้ : <br> <?php echo $result['treat_comments']; ?>
+                </h3>
+
             </div>
             <br>
             <br>
@@ -49,10 +56,20 @@ if (!isset($_SESSION['id_account']) || !isset($_SESSION['role_account'])) { //�
             </div>
         </fieldset>
     </center>
+    <br>
+    <br>
+    <br>
+    <center>
+        <h5>"เมื่อเสร็จสินการรักษา" หน้านี้จะถูกลบไปโดยอัตโนมัติ//กรุณาติดตามผลกับแพทย์</h5>
+        <a href="index.php?logout=1">
+            <button type="submit" class="btn btn-danger">ออกจากระบบ</button>
+        </a>
+    </center>
 
 
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
