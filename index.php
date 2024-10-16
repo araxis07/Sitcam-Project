@@ -35,6 +35,79 @@ if(mysqli_num_rows($call_back_patience_account) == 1){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MEMBER</title>
 </head>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        center {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        img {
+            max-width: 150px;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        h1 {
+            margin-top: 20px;
+        }
+        a {
+            color: red;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form p {
+            font-weight: bold;
+            color: #333;
+        }
+        form input[type="radio"] {
+            margin-right: 10px;
+        }
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question p {
+            margin-bottom: 10px;
+        }
+    </style>
 <body>
 <center>
         <img src="<?php echo $image_account; ?>">
