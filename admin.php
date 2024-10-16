@@ -2,7 +2,6 @@
 session_start();
 $open_connect = 1;
 require('connect.php');
-// Test Commit to git repository
 
 if (!isset($_SESSION['id_account']) || $_SESSION['role_account'] != 'admin') { //ถ้าไม่มีเซสชัน id_account หรือเซสชัน role_account จะถูกส่งไปหน้า login
     die(header('Location: form-login.php'));
@@ -54,6 +53,7 @@ if (!isset($_SESSION['id_account']) || $_SESSION['role_account'] != 'admin') { /
                 <th>Risk</th>
                 <th>Case</th>
                 <th>Treat</th>
+                <th>CheckTreated</th>
             </tr>
         </thead>
         <tbody>
@@ -71,11 +71,16 @@ if (!isset($_SESSION['id_account']) || $_SESSION['role_account'] != 'admin') { /
                         <a href="doc_treat.php?edit=<?= $result['username']; ?>" style="color:green">
                             <i class="fa fa-book" aria-hidden="true"></i></a>&nbsp
                         <?php
-                        
+
                         if (!empty($result['docname'])) {
                             echo "<span style='color:blue;'>(Treated)</span>";
                         }
                         ?>
+                    </td>
+                    <td>
+                        <a href="#" onclick="confirmDelete('<?php echo $result['username']; ?>')" style="color:red">
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                        </a>
                     </td>
                 </tr>
 
@@ -85,6 +90,14 @@ if (!isset($_SESSION['id_account']) || $_SESSION['role_account'] != 'admin') { /
             ?>
         </tbody>
     </table>
+    <script>
+        function confirmDelete(username) {
+            if (confirm("ยืนยันว่าต้องการสิ้นสุดการรักษาหรือไม่?")) {
+                window.location.href = "delete_patient.php?username=" + username;
+            }
+        }
+    </script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
