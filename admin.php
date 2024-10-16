@@ -2,6 +2,7 @@
 session_start();
 $open_connect = 1;
 require('connect.php');
+// Test Commit to git repository
 
 if (!isset($_SESSION['id_account']) || $_SESSION['role_account'] != 'admin') { //ถ้าไม่มีเซสชัน id_account หรือเซสชัน role_account จะถูกส่งไปหน้า login
     die(header('Location: form-login.php'));
