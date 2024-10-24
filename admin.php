@@ -99,7 +99,7 @@ if (!isset($_SESSION['id_account']) || $_SESSION['role_account'] != 'admin') { /
         <!-- ลิงก์นำทางเพิ่มเติม -->
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                <!-- คุณสามารถเพิ่มรายการเมนูเพิ่มเติมที่นี่ -->
+                <!-- สามารถเพิ่มรายการเมนูเพิ่มเติมที่นี่ -->
                 <li class="nav-item">
                     <a class="nav-link" href="index.php?logout=1"><i class="fas fa-sign-out-alt"></i> ออกจากระบบ</a>
                 </li>
