@@ -105,7 +105,7 @@ if (!isset($_SESSION['id_account']) || !isset($_SESSION['role_account'])) { //�
         <div class="diagnosis-fieldset">
             <h3>
                 ตามอาการที่คนไข้ประสบพบเจอหมอคิดว่าคุณ: <?php echo $result['comments']; ?><br><br>
-                สามารถ: <?php echo $result['treat_score']; ?><br><br>
+                วิธีการรักษา: <?php echo $result['treat_score']; ?><br><br>
                 และขอแนะนำให้ปฏิบัติ/มาตามนัด ดังนี้:<br> <?php echo $result['treat_comments']; ?>
             </h3>
 
