@@ -10,7 +10,7 @@
     <style>
         body {
             background-color: #f0f8ff; /* พื้นหลังสีฟ้าอ่อนสำหรับธีมหมอ */
-            font-family: Arial, sans-serif;
+            font-family: Aria, sans-serif;
         }
         .container {
             max-width: 500px;

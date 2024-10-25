@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }elseif($total_score > 7 && $total_score <=14) {
         $total_score = 'ความเสี่ยงกลาง';
     }elseif($total_score > 14 && $total_score <=21){
-        $total_score = 'ตวามเสี่ยงสูง';
+        $total_score = 'ความเสี่ยงสูง';
     }
 
     // รับค่าข้อความเพิ่มเติม
